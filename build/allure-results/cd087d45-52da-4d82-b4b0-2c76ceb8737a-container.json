@@ -1,0 +1,1 @@
+{"uuid":"cd087d45-52da-4d82-b4b0-2c76ceb8737a","name":"StepsSelenideTest","children":["f9a1a23d-b417-4e5f-939a-2aca2b6c4efe"],"befores":[{"name":"beforeAll","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1758036741708,"stop":1758036741719}],"afters":[],"start":1758036741686,"stop":1758036749807}
