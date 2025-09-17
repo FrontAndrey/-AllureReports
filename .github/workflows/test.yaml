@@ -27,12 +27,6 @@ jobs:
           ref: gh-pages
           path: gh-pages
       # Генерируем отчёт
-      - uses: peaceiris/actions-gh-pages@v2
-        if: always()
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-      # Публикуем отчёт
       - uses: simple-elf/allure-report-action@master
         if: always()
         with:
@@ -40,4 +34,13 @@ jobs:
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: allure-history
+      # Публикуем отчёт
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
+
 
