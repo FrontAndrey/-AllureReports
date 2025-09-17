@@ -17,7 +17,7 @@ jobs:
       - uses: Xotabu4/selenoid-github-action@v2
       - run: chmod +x ./gradlew
       # запуск тестов
-      - run: ./gradlew clean test -Dselenide.remote=https://your.selenoid.com:4444/wd/hub
+      - run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
 
       # Скачиваем историю тестов
       - uses: actions/checkout@v2
